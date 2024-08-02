@@ -12,6 +12,7 @@ const config: Config = {
        pink: {
         "base": "#FD85B2",
         "400": "#FF5394",
+        "600": "#E34F4D",
        },
       },
     },
