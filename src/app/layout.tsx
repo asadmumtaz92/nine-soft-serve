@@ -1,7 +1,5 @@
 import React from "react"
 import "./globals.css"
-import { Rowdies } from "next/font/google"
-const inter = Rowdies({ subsets: ["latin"], weight: '400' })
 
 import type { Metadata } from "next"
 export const metadata: Metadata = {
@@ -15,6 +13,7 @@ export const metadata: Metadata = {
     ],
 }
 
+import { Fonts } from "@/utils/fonts"
 import Header from "@/components/header/page"
 
 interface RootLayoutProps {
@@ -27,7 +26,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={`${Fonts.outfit} ${Fonts.rowdies}`}>
                 <Header />
                 <div className="">
                     {children}
