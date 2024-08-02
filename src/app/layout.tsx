@@ -1,36 +1,39 @@
-import type { Metadata } from "next";
-import { Rowdies, Outfit } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/header/page";
+import React from "react"
+import "./globals.css"
 
-
-const inter = Rowdies({ subsets: ["latin"], weight:'400' });
-
+import type { Metadata } from "next"
 export const metadata: Metadata = {
-  title: {
-    template: "%s - Cake Shop",
-    default: "Cake Shop",
-  },
-  description: "",
-  keywords: [
-    "",
-  ],
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-       
-          {children}
-        
-      
-      </body>
-    </html>
-  );
+    title: {
+        template: "%s - Cake Shop",
+        default: "Cake Shop",
+    },
+    description: "",
+    keywords: [
+        "",
+    ],
 }
+
+import { Fonts } from "@/utils/fonts"
+import Header from "@/components/header/page"
+
+interface RootLayoutProps {
+    readonly children: React.ReactNode
+}
+
+
+const RootLayout = ({ children }: RootLayoutProps) => {
+
+
+    return (
+        <html lang="en">
+            <body className={`${Fonts.outfit} ${Fonts.rowdies}`}>
+                <Header />
+                <div className="">
+                    {children}
+                </div>
+            </body>
+        </html>
+    )
+}
+
+export default RootLayout

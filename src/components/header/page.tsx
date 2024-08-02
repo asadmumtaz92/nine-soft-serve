@@ -1,74 +1,164 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { Logo, CartIcon, DeliveryIcon } from "@/utils/assets";
-import { Outfit } from "next/font/google";
+"use client"
+import { useState, useEffect, } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { usePathname } from "next/navigation"
 
-const outfit = Outfit({ subsets: ["latin"], weight: ["400", "700"] });
 
-const Header: React.FC = () => {
-  const [prevScrollpos, setPrevScrollpos] = useState(0);
-  const [scrollTimeout, setScrollTimeout] = useState<number | null>(null);
+export default function Header({ localeHeader }: any) {
 
-  const handleScroll = () => {
-    const currentScrollPos = window.scrollY;
-    const navbar = document.getElementById("navbar");
 
-    if (navbar) {
-      navbar.style.top = "-130px";
-    }
+    const pathname = usePathname()
+    const [isMobile, setIsMobile] = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [prevScrollpos, setPrevScrollpos] = useState(0)
+    const [scrollTimeout, setScrollTimeout] = useState<number | null>(null)
 
-    setPrevScrollpos(currentScrollPos);
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+    const handleLinkClick = () => setIsMenuOpen(false)
 
-    if (scrollTimeout) {
-      clearTimeout(scrollTimeout);
-    }
+    const handleScroll = () => {
+        const currentScrollPos = window.scrollY;
+        const navbar = document.getElementById("navbar")
 
-    setScrollTimeout(
-      setTimeout(() => {
-        const navbar = document.getElementById("navbar");
         if (navbar) {
-          navbar.style.transition = "all 0.3s ease-in-out";
-          navbar.style.top = "0";
+            if (currentScrollPos > prevScrollpos && currentScrollPos > 50) {
+                navbar.style.top = "-130px";
+            } else {
+                navbar.style.top = "-130px";
+            }
         }
-      }, 100) as unknown as number
-    );
-  };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+        setPrevScrollpos(currentScrollPos);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+        if (scrollTimeout) clearTimeout(scrollTimeout)
 
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-    };
-  }, [prevScrollpos, scrollTimeout]);
+        setScrollTimeout(
+            setTimeout(() => {
+                const navbar = document.getElementById("navbar")
+                if (navbar) {
+                    navbar.style.transition = "all 0.3s ease-in-out"
+                    navbar.style.top = "0"
+                }
+            }, 100) as unknown as number
+        )
+    }
 
-  return (
-    <header className="lg:px-[120px] px-[80px] bg-pink-base">
-      <div className="flex flex-row justify-between items-center border-b-2 border-dashed border-white lg:h-[130px] h-[120px]">
-        <div className="flex items-end">
-          <Image src={Logo} alt="logo" width={150} height={137} className="w-[120px] lg:w-[150px]" />
-        </div>
-        <nav className="bg-white lg:h-[50px] h-[40px] flex items-center justify-center rounded-[20px]">
-          <ul className={`${outfit.className} flex flex-row no-underline justify-between items-center font-semibold lg:text-[16px] text-[14px] leading-[15px] text-pink-400 lg:px-[40px] px-[20px] lg:gap-[22px] gap-[18px]`}>
-            <li>Home</li>
-            <li>Shop</li>
-            <li>Icecreams</li>
-            <li>Cakes</li>
-            <li>Catering</li>
-          </ul>
-        </nav>
-        <div className="flex gap-[19px]">
-          <Image src={DeliveryIcon} alt="icon" height={30} width={30} />
-          <Image src={CartIcon} alt="icon" height={24} width={22} />
-        </div>
-      </div>
-    </header>
-  );
-};
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 1024)
 
-export default Header;
+        handleResize()
+        window.addEventListener("resize", handleResize)
+        window.addEventListener("scroll", handleScroll)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+            window.removeEventListener("scroll", handleScroll)
+
+            if (scrollTimeout) clearTimeout(scrollTimeout)
+        }
+    }, [prevScrollpos, scrollTimeout])
+
+
+    return (
+        <header id="navbar" className={`flex justify-between items-center fixed w-full z-[20] h-[120px] px-[40px] md:px-[80px] xl:px-[120px] bg-pink-base`}>
+            <div className="flex justify-between items-center w-full border-b-2 border-dashed border-white h-full">
+                <div className="flex items-center">
+                    <Link href="/">
+                        <Image src={'/logo.png'} priority className="w-[100px] md:w-[140px]" alt="cake shop logo" width={100} height={20} />
+                    </Link>
+                </div>
+
+                {isMobile ? (
+                    <>
+                        <Image
+                            src="/images/menu.svg"
+                            alt="Menu Logo"
+                            width={42}
+                            height={42}
+                            className="mr-[25px]"
+                            onClick={toggleMenu}
+                            priority
+                        />
+                        <div
+                            className={`fixed top-0 left-0 w-full h-full z-[999] flex flex-col justify-center items-center transform transition-transform duration-500 bg-black ease-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+                                }`}
+                        >
+                            <Image
+                                src="/images/cross-icon.svg"
+                                alt="Cross Icon"
+                                width={34}
+                                height={34}
+                                className="absolute top-6 right-6"
+                                onClick={toggleMenu}
+                            />
+                            <Link
+                                onClick={handleLinkClick}
+                                href="/cases"
+                                className="text-white no-underline font-bold text-[2.25rem] mt-24 uppercase "
+                            >
+                                {localeHeader?.cases}
+                            </Link>
+                            <Link
+                                onClick={handleLinkClick}
+                                href="/about"
+                                className="text-white no-underline font-bold text-[2.25rem] mt-24 uppercase "
+                            >
+                                {localeHeader?.about}
+                            </Link>
+                            <Link
+                                onClick={handleLinkClick}
+                                href="/contact"
+                                className="text-white no-underline font-bold text-[2.25rem] mt-24 uppercase "
+                            >
+                                {localeHeader?.contact}
+                            </Link>
+                            <div>
+                                <Image
+                                    src="/images/mid-logo.svg"
+                                    alt="Nexttier logo"
+                                    width={21.19}
+                                    height={12.61}
+                                    className="pt-6"
+                                />
+                            </div>
+                        </div>
+                    </>
+                ) : (
+                    <div className="hidden lg:block mx-[30px]">
+                        <nav className="flex items-center  gap-x-[25px] font-outfit !font-[600] text-[1rem] bg-white rounded-[20px] px-[30px] h-[50px]">
+                            <Link href="/" className={`no-underline text-pink-400 uppercase  ${pathname.endsWith("/") ? "!text-black" : ""}`}>
+                                {`Home`}
+                            </Link>
+                            <Link href="/shop" className={`no-underline text-pink-400 uppercase  ${pathname.endsWith("/shop") ? "!text-black" : ""}`}>
+                                {`Shop`}
+                            </Link>
+                            <Link href="/icecreams" className={`no-underline text-pink-400 uppercase ${pathname.endsWith("/icecreams") ? "!text-black" : ""}`}>
+                                {`Icecreams`}
+                            </Link>
+                            <Link href="/cakes" className={`no-underline text-pink-400 uppercase  ${pathname.endsWith("/cakes") ? "!text-black" : ""}`}>
+                                {`Cakes`}
+                            </Link>
+                            <Link href="/catering" className={`no-underline text-pink-400 uppercase  ${pathname.endsWith("/catering") ? "!text-black" : ""}`}>
+                                {`Catering`}
+                            </Link>
+                        </nav>
+                    </div>
+                )}
+
+                <div className="flex items-center gap-x-[20px]">
+                    <Image src={'/icons/delivery.svg'} priority className="cursor-pointer delivery" alt="icon" height={30} width={30} />
+                    <div className="flex relative cursor-pointer">
+                        <span className="flex items-center justify-center absolute right-[-11px] top-[-8px] w-[20px] h-[20px] rounded-[10px] bg-black text-white text-[0.7rem] leading-[0.7rem]">2</span>
+                        <Image src={'/icons/cart-icon.svg'} priority className="" alt="icon" height={20} width={18} />
+                    </div>
+                </div>
+            </div>
+        </header>
+    )
+}
+
+
+
+
+
