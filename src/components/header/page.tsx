@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { MenuIcon, X } from "lucide-react"
 
 
-export default function Header({ localeHeader }: any) {
+const Header = () => {
 
 
     const pathname = usePathname()
@@ -24,9 +24,9 @@ export default function Header({ localeHeader }: any) {
 
         if (navbar) {
             if (currentScrollPos > prevScrollpos && currentScrollPos > 50) {
-                navbar.style.top = "-130px";
+                navbar.style.top = "-120px";
             } else {
-                navbar.style.top = "-130px";
+                navbar.style.top = "-120px";
             }
         }
 
@@ -129,7 +129,4 @@ export default function Header({ localeHeader }: any) {
     )
 }
 
-
-
-
-
+export default Header
