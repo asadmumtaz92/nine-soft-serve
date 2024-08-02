@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Logo, CartIcon, DeliveryIcon } from "@/utils/assets";
 import { Outfit } from "next/font/google";
 
+const outfit = Outfit({ subsets: ["latin"], weight: ["400", "700"] });
+
 const Header: React.FC = () => {
   const [prevScrollpos, setPrevScrollpos] = useState(0);
   const [scrollTimeout, setScrollTimeout] = useState<number | null>(null);
@@ -46,13 +48,13 @@ const Header: React.FC = () => {
   }, [prevScrollpos, scrollTimeout]);
 
   return (
-    <header className="lg:px-[120px] px-[100px] bg-pink-base">
+    <header className="lg:px-[120px] px-[80px] bg-pink-base">
       <div className="flex flex-row justify-between items-center border-b-2 border-dashed border-white lg:h-[130px] h-[120px]">
         <div className="flex items-end">
-          <Image src={Logo} alt="logo" width={150} height={137} />
+          <Image src={Logo} alt="logo" width={150} height={137} className="w-[120px] lg:w-[150px]" />
         </div>
-        <nav className="bg-white h-[50px] flex items-center justify-center rounded-[20px]">
-          <ul className="flex flex-row no-underline justify-between items-center font-medium text-[16px] leading-[15px] text-pink-400 px-[40px] gap-[22px]">
+        <nav className="bg-white lg:h-[50px] h-[40px] flex items-center justify-center rounded-[20px]">
+          <ul className={`${outfit.className} flex flex-row no-underline justify-between items-center font-semibold lg:text-[16px] text-[14px] leading-[15px] text-pink-400 lg:px-[40px] px-[20px] lg:gap-[22px] gap-[18px]`}>
             <li>Home</li>
             <li>Shop</li>
             <li>Icecreams</li>
