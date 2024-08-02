@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 import { Fonts } from "@/utils/fonts"
 import Header from "@/components/header/page"
+import Footer from "@/components/footer/page"
 
 interface RootLayoutProps {
     readonly children: React.ReactNode
@@ -31,6 +32,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                 <div className="">
                     {children}
                 </div>
+                <Footer />
             </body>
         </html>
     )
