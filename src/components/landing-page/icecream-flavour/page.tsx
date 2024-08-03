@@ -102,13 +102,13 @@ const IceCreams = () => {
         <>
             <div className="flex relative bottom-[-50px] w-full h-[100px] rotate-[180deg] bg-[url('/bg/delic_flav_footer.svg')] bg-cover bg-bottom self-stretch bg-no-repeat"></div>
 
-            <div className="flex bg-[#FBE8EC] flex-col justify-center w-full min-h-[100vh] pt-[160px] bg-[url('/bg/delic_flav.svg')] bg-top bg-cover self-stretch bg-no-repeat">
+            <div id="icecreams" className="flex bg-[#FBE8EC] flex-col justify-center w-full min-h-[100vh] pt-[160px] bg-[url('/bg/delic_flav.svg')] bg-top bg-cover self-stretch bg-no-repeat">
                 <div className="flex justify-center !font-rowdies !font-[400] text-[50px] leading-[60px] text-center text-pink-600 mb-[80px] px-[40px] md:px-[80px] xl:px-[120px]">
                     Our Flavoured Icreams
                 </div>
 
                 {/* TABS */}
-                <div className='flex gap-x-[20px] p-[5px] overflow-hidden overflow-x-scroll ml-[40px] md:ml-[80px] xl:ml-[120px] pr-[50px]'>
+                <div className='flex 3xl:justify-center  3xl:max-w-[1900px] 3xl:mx-auto gap-x-[20px] p-[5px] overflow-hidden overflow-x-scroll ml-[40px] md:ml-[80px] xl:ml-[120px] pr-[50px]'>
                     {flavours?.map((item: any) => {
                         return (
                             <div
@@ -124,7 +124,7 @@ const IceCreams = () => {
                 {/* PRODUCTS */}
                 <div className={`grid grid-cols-12 mt-[100px] px-[40px] md:px-[80px] xl:px-[120px]`}>
                     <div className="col-start-1 col-end-13">
-                        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[20px]`}>
+                        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-[20px] 3xl:max-w-[1900px] 3xl:mx-auto`}>
                             {products?.map((item: any) => {
                                 if (item?.type == activeTab) {
                                     return <ProductItem key={item?.id} data={item} />

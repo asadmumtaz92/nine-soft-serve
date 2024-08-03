@@ -84,13 +84,13 @@ const Header = () => {
                             <Link onClick={handleLinkClick} href="/shop" className={`${pathname.endsWith("/shop") ? "!text-black" : ""} no-underline mt-8`}>
                                 {'Shop'}
                             </Link>
-                            <Link onClick={handleLinkClick} href="/icecreams" className={`${pathname.endsWith("/icecreams") ? "!text-black" : ""} no-underline mt-8`}>
+                            <Link onClick={handleLinkClick} href="/#icecreams" className={`${pathname.endsWith("/icecreams") ? "!text-black" : ""} no-underline mt-8`}>
                                 {'Icecreams'}
                             </Link>
-                            <Link onClick={handleLinkClick} href="/cakes" className={`${pathname.endsWith("/cakes") ? "!text-black" : ""} no-underline mt-8`}>
+                            <Link onClick={handleLinkClick} href="/#cakes" className={`${pathname.endsWith("/cakes") ? "!text-black" : ""} no-underline mt-8`}>
                                 {'Cakes'}
                             </Link>
-                            <Link onClick={handleLinkClick} href="/catering" className={`${pathname.endsWith("/catering") ? "!text-black" : ""} no-underline mt-8`}>
+                            <Link onClick={handleLinkClick} href="/#catering" className={`${pathname.endsWith("/catering") ? "!text-black" : ""} no-underline mt-8`}>
                                 {'Catering'}
                             </Link>
                         </div>
@@ -104,13 +104,13 @@ const Header = () => {
                             <Link href="/shop" className={`no-underline text-pink-400 uppercase ${pathname.endsWith("/shop") ? "!text-black" : ""}`}>
                                 {`Shop`}
                             </Link>
-                            <Link href="/icecreams" className={`no-underline text-pink-400 uppercase ${pathname.endsWith("/icecreams") ? "!text-black" : ""}`}>
+                            <Link href="/#icecreams" className={`no-underline text-pink-400 uppercase ${pathname.endsWith("/icecreams") ? "!text-black" : ""}`}>
                                 {`Icecreams`}
                             </Link>
-                            <Link href="/cakes" className={`no-underline text-pink-400 uppercase ${pathname.endsWith("/cakes") ? "!text-black" : ""}`}>
+                            <Link href="/#cakes" className={`no-underline text-pink-400 uppercase ${pathname.endsWith("/cakes") ? "!text-black" : ""}`}>
                                 {`Cakes`}
                             </Link>
-                            <Link href="/catering" className={`no-underline text-pink-400 uppercase ${pathname.endsWith("/catering") ? "!text-black" : ""}`}>
+                            <Link href="/#catering" className={`no-underline text-pink-400 uppercase ${pathname.endsWith("/catering") ? "!text-black" : ""}`}>
                                 {`Catering`}
                             </Link>
                         </nav>

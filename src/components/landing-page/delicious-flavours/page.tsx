@@ -133,7 +133,7 @@ const DeliciousFlavours = () => {
 
     return (
         <>
-            <div className="flex flex-col justify-center w-full min-h-[100vh] pt-[160px] z-[4] bg-[url('/bg/delic_flav.svg')] bg-top bg-cover self-stretch bg-no-repeat">
+            <div id="cakes" className="flex flex-col justify-center w-full min-h-[100vh] pt-[160px] z-[4] bg-[url('/bg/delic_flav.svg')] bg-top bg-cover self-stretch bg-no-repeat">
                 <div className="flex justify-center !font-rowdies !font-[400] text-[50px] leading-[60px] text-center text-pink-600 mb-[80px]">
                     Delicious Flavours
                 </div>

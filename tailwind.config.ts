@@ -8,6 +8,9 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            screens:{
+                '3xl':'1900px'
+            },
             colors: {
                 pink: {
                     "base": "#FD85B2",

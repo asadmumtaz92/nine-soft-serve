@@ -11,7 +11,7 @@ const Scooping: React.FC = () => {
         <>
             <div className="bpc z-[2] relative bg-[url('/images/hero-sec-2.svg')] bg-cover flex w-[100vw]"></div>
 
-            <div className="text-center mt-[-200px] mb-[140px] relative">
+            <div className="text-center mt-[-200px] mb-[140px] relative  3xl:max-w-[1900px] 3xl:mx-auto">
                 <h2 className=" text-[50px] !font-rowdies">Scooping Happiness into Every Cone</h2>
                 <p className="text-center bpcp !font-[200] !font-rowdies mt-[70px] capitalize px-[8%]">
                     Ice cream is a yummy treat &nbsp;
