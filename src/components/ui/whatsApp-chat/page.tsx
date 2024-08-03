@@ -105,7 +105,7 @@ const WhatsAppChat = () => {
                 <div className="flex flex-1 flex-col bg-white absolute top-[115px] w-full h-[325px] overflow-hidden overflow-scroll btr pt-3">
                     <div className="flex flex-col gap-y-[20px] rounded-2xl mx-6 flex-1">
                         <p className='px-4 flex items-center bg-[#F3FBF2] w-full h-[40px] rounded-2xl'>Hello how can i help you?</p>
-                        <p className='px-4 py-2 flex items-center bg-[#F3FBF2] w-full h-[40px] rounded-2xl justify-end'>Hello! I'm looking on specific flavour</p>
+                        <p className='px-4 py-2 flex items-center bg-[#F3FBF2] w-full h-[40px] rounded-2xl justify-end'>Hello! I am looking on specific flavour</p>
                         <p className='px-4 flex items-center bg-[#F3FBF2] w-full h-[40px] rounded-2xl'>Which flavour you want?</p>
                     </div>
                     <div className="flex items- bg-[#F3FBF2] w-full h-[50px]">
