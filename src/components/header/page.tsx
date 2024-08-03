@@ -74,10 +74,10 @@ const Header = () => {
                     <>
                         {/* MENU OPEN ICON */}
                         <div className="flex flex-1 justify-end ">
-                            <MenuIcon onClick={toggleMenu} className="cursor-pointer text-white w-[35px] h-[35px] mr-[20px]" />
+                            <MenuIcon onClick={toggleMenu} className="cursor-pointer text-white w-[35px] h-[35px] mr-[20px] hover:rotate-[90deg] transation trnsform duration-500" />
                         </div>
                         <div className={`text-pink-base text-[2.25rem] uppercase  fixed top-0 left-0 w-full h-full z-[999] flex flex-col justify-center items-center transform transition-transform duration-500 bg-white ease-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
-                            <X onClick={toggleMenu} className="cursor-pointer absolute top-6 right-6 text-pink-base w-[35px] h-[35px]" />
+                            <X onClick={toggleMenu} className="cursor-pointer absolute top-6 right-6 text-pink-base w-[35px] h-[35px] hover:rotate-[180deg] transation trnsform duration-500" />
                             <Link onClick={handleLinkClick} href="/" className={`${pathname.endsWith("/") ? "!text-black" : ""} no-underline`}>
                                 {'Home'}
                             </Link>

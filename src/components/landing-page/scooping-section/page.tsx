@@ -17,11 +17,11 @@ const Scooping: React.FC = () => {
                     Ice cream is a yummy treat &nbsp;
                     <Image src={icicon1} alt="icon" height={50} width={50} className="inline relative top-[-10px]" />
                     &nbsp; at that we all love. It comes in many flavors like chocolate, vanilla, strawberry &nbsp;
-                    <Image src={icicon2} alt="icon" height={50} width={50} className="inline relative `top-[-5px]" />
+                    <Image src={icicon2} alt="icon" height={50} width={50} className="inline relative `top-[-5px] hover:rotate-[90deg] transation trnsform duration-1000" />
                     &nbsp; and more. Some people like it in a &nbsp;
-                    <Image src={icicon3} alt="icon" height={40} width={40} className="inline relative top-[-10px]" />
+                    <Image src={icicon3} alt="icon" height={40} width={40} className="inline relative top-[-10px] hover:rotate-[-30deg] transation trnsform duration-500" />
                     &nbsp; bowl, and some like it in a cone.
-                    <Image src={'/icons/heart.svg'} alt="icon" height={60} width={60} className="inline adbsolute ml-2" />
+                    <Image src={'/icons/heart.svg'} alt="icon" height={60} width={60} className="inline adbsolute ml-2 hover:rotate-[90deg] transation trnsform duration-1000" />
                 </p>
                 <Image src={icicon4} alt="icon" height={60} width={60} className="inline absolute top-[240px] left-[5%]" />
             </div>
