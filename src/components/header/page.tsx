@@ -117,11 +117,11 @@ const Header = () => {
                     </div>
                 )}
 
-                <div className="flex items-center gap-x-[20px]">
-                    <Image src={'/icons/delivery.svg'} priority className="cursor-pointer delivery" alt="icon" height={30} width={30} />
+                <div className="flex items-center gap-x-[20px] pr-4">
+                    <Image src={'/icons/delivery.svg'} priority className="cursor-pointer delivery" alt="icon" height={30} width={35} />
                     <div className="flex relative cursor-pointer">
                         <span className="flex items-center justify-center absolute right-[-11px] top-[-8px] w-[20px] h-[20px] rounded-[10px] bg-black text-white text-[0.7rem] leading-[0.7rem]">2</span>
-                        <Image src={'/icons/cart-icon.svg'} priority className="min-w-[20px] min-h-[18px]" alt="icon" height={20} width={18} />
+                        <Image src={'/icons/cart-icon.svg'} priority className="min-w-[20px] min-h-[18px]" alt="icon" height={20} width={23} />
                     </div>
                 </div>
             </div>

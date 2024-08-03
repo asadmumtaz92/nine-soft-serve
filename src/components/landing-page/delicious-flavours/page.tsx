@@ -151,7 +151,7 @@ const DeliciousFlavours = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex w-full h-[130px] z-[3] bg-[url('/bg/delic_flav_footer.svg')] bg-cover bg-bottom self-stretch bg-no-repeat"></div>
+            <div className="flex mt-[-2px] w-full h-[130px] z-[3] bg-[url('/bg/delic_flav_footer.svg')] bg-cover bg-bottom self-stretch bg-no-repeat"></div>
         </>
     )
 }
