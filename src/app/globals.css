@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CUSTOM/GLOBAL STYLE */
+::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+}
+
 .bpc {
     background-position: 50% 50%;
     text-align: center;
