@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
                     tempus a. Nulla luctus consequat odio, eget pulvinar libero elementum
                     nec. Pellentesque luctus placerat.
                 </p>
-                <Link href="#shop-now">
+                <Link href="/shop">
                     <Button className="h-[60px] px-[54px] rounded-[20px] bg-white text-pink-600 text-[20px] leading-[36px] text-center !font-outfit !font-[600]">
                         Shop Now
                     </Button>
@@ -33,7 +33,6 @@ const HeroSection: React.FC = () => {
             <Image src={Heroicon2} alt="icon" height={129} width={116} className="absolute top-[178px] right-[10%]" />
             <Image src={Heroicon3} alt="icon" height={63} width={62} className="absolute bottom-[133px] left-[15%]" />
             <Image src={Heroicon4} alt="icon" height={63} width={59} className="absolute bottom-[150px] right-[20%]" />
-            <Image src={'/icons/whatsapp.svg'} alt="icon" height={63} width={59} className="hover:opacity-[0.9] cursor-pointer fixed bottom-[20px] right-[20px] min-w-[200px] w-auto" />
         </div>
     )
 }
