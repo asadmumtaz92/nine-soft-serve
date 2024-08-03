@@ -67,12 +67,12 @@ const IceCreams = () => {
         { id: 41, image: '/images/vanilla.svg', type: 7 },
         { id: 42, image: '/images/choclate.svg', type: 7 },
 
-        { id: 37, image: '/images/vanilla.svg', type: 8 },
-        { id: 38, image: '/images/choclate.svg', type: 8 },
-        { id: 39, image: '/images/choclate.svg', type: 8 },
-        { id: 40, image: '/images/choclate.svg', type: 9 },
-        { id: 41, image: '/images/vanilla.svg', type: 9 },
-        { id: 42, image: '/images/choclate.svg', type: 9 },
+        { id: 43, image: '/images/vanilla.svg', type: 8 },
+        { id: 4, image: '/images/choclate.svg', type: 8 },
+        { id: 45, image: '/images/choclate.svg', type: 8 },
+        { id: 46, image: '/images/choclate.svg', type: 9 },
+        { id: 47, image: '/images/vanilla.svg', type: 9 },
+        { id: 48, image: '/images/choclate.svg', type: 9 },
     ]
 
     const ProductItem = (data: any) => {
