@@ -1,5 +1,6 @@
 import React from "react"
 import "./globals.css"
+import Image from "next/image"
 
 import type { Metadata } from "next"
 export const metadata: Metadata = {
@@ -31,6 +32,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                 <Header />
                 <>
                     {children}
+                    <Image src={'/icons/whatsapp.svg'} alt="icon" height={63} width={59} className="hover:opacity-[0.9] z-[11] cursor-pointer fixed bottom-[20px] right-[20px] min-w-[200px] w-auto" />
+
                 </>
                 <Footer />
             </body>
