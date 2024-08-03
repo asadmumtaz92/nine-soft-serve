@@ -38,6 +38,27 @@ const IceCreams = () => {
         { id: 16, image: '/images/choclate.svg', type: 2 },
         { id: 17, image: '/images/choclate.svg', type: 2 },
         { id: 18, image: '/images/choclate.svg', type: 2 },
+
+        { id: 19, image: '/images/vanilla.svg', type: 3 },
+        { id: 20, image: '/images/choclate.svg', type: 3 },
+        { id: 21, image: '/images/vanilla.svg', type: 3 },
+        { id: 22, image: '/images/choclate.svg', type: 3 },
+        { id: 23, image: '/images/vanilla.svg', type: 3 },
+        { id: 24, image: '/images/choclate.svg', type: 3 },
+
+        { id: 25, image: '/images/vanilla.svg', type: 4 },
+        { id: 26, image: '/images/vanilla.svg', type: 4 },
+        { id: 27, image: '/images/choclate.svg', type: 4 },
+        { id: 28, image: '/images/choclate.svg', type: 4 },
+        { id: 29, image: '/images/vanilla.svg', type: 4 },
+        { id: 30, image: '/images/choclate.svg', type: 4 },
+
+        { id: 11, image: '/images/vanilla.svg', type: 5 },
+        { id: 32, image: '/images/choclate.svg', type: 5 },
+        { id: 33, image: '/images/vanilla.svg', type: 5 },
+        { id: 34, image: '/images/choclate.svg', type: 5 },
+        { id: 35, image: '/images/vanilla.svg', type: 5 },
+        { id: 36, image: '/images/choclate.svg', type: 5 },
     ]
 
     const ProductItem = (data: any) => {

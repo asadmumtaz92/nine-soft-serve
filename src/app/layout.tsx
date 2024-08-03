@@ -5,7 +5,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
     title: {
         template: "%s - NINE",
-        default: "NINE",
+        default: "NINE - Home",
     },
     description: "",
     keywords: [
@@ -29,9 +29,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         <html lang="en">
             <body className={`${Fonts.outfit} ${Fonts.rowdies}`}>
                 <Header />
-                <div className="">
+                <>
                     {children}
-                </div>
+                </>
                 <Footer />
             </body>
         </html>
