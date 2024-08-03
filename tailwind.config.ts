@@ -30,12 +30,17 @@ const config: Config = {
                 },
                 rotate: {
                     '0%, 10%': { transform: 'rotate(0deg)' },
-                    '50%': { transform: 'rotate(30deg)' },
-                  },
+                    '50%': { transform: 'rotate(20deg)' },
+                },
+                rotateZ: {
+                    '0%, 100%': { transform: 'rotateY(0deg)', },
+                    '50%': { transform: 'rotateY(40deg)' },
+                },
             },
             animation: {
                 scrollingLogo: "scroll 500s linear infinite",
-                rotate: 'rotate 1s linear infinite',
+                rotate: 'rotate 2s linear infinite',
+                rotateZ: 'rotateZ 2s linear infinite',
             },
         },
     },
