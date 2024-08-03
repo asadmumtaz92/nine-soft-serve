@@ -3,16 +3,17 @@ import Button from "@/components/ui/button/page";
 import Link from "next/link";
 import { Outfit } from "next/font/google";
 import Image from "next/image";
-import { HeroHeadingIcon, Heroicon1, Heroicon2, Heroicon3, Heroicon4 } from "@/utils/assets";
+import { HeroHeadingIcon, Heroicon1, Heroicon2, Heroicon3, Heroicon4, icicon1, icicon2, icicon3, icicon4 } from "@/utils/assets";
 
 const outfit = Outfit({ subsets: ["latin"], weight: ["400", "700"] });
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative bg-[url('../../public/images/hero-sec.svg')] bg-cover bg-bottom bg-center bg-no-repeat pt-[80px] pb-[130px] lg:px-[120px] px-[100px] flex flex-col items-center justify-center max-h-[100vh] gap-[17px]">
+    <>
+    <div className="z-[100] relative bg-[url('../../public/images/hero-sec.svg')] bg-cover bg-bottom bg-center bg-no-repeat pt-[250px] pb-[130px] lg:px-[120px] px-[100px] flex flex-col items-center justify-center max-h-[100vh] gap-[17px]">
       <div className="flex relative">
         <Image src={HeroHeadingIcon} alt="icon" height={115} width={97} className="absolute lg:top-[-40px] top-[-34px] lg:left-[115px] left-[176px] lg:h-[115] lg:w-[97px] h-[95px] w-[80px]" />
-        <h1 className="lg:text-[75px] text-[55px] lg:leading-[95px] leading-[80px] text-center text-white font-normal md:max-w-[734px]">
+        <h1 className="lg:text-[75px] text-[55px] lg:leading-[95px] leading-[80px] text-center text-white font-bold md:max-w-[734px]">
           Scooping <br /> Happiness & Baking Freshness All Day, Every Day!
         </h1>
       </div>
@@ -30,11 +31,27 @@ const HeroSection: React.FC = () => {
           </Button>
         </Link>
       </div>
-      <Image src={Heroicon1} alt="icon" height={92} width={91} className="absolute top-[105px] left-[88px]" />
-      <Image src={Heroicon2} alt="icon" height={129} width={116} className="absolute top-[78px] right-[154px]" />
+      <Image src={Heroicon1} alt="icon" height={92} width={91} className="absolute top-[205px] left-[88px]" />
+      <Image src={Heroicon2} alt="icon" height={129} width={116} className="absolute top-[178px] right-[154px]" />
       <Image src={Heroicon3} alt="icon" height={63} width={62} className="absolute bottom-[133px] left-[320px]" />
-      <Image src={Heroicon4} alt="icon" height={63} width={59} className="absolute bottom-[90px] right-[326px]" />
+      <Image src={Heroicon4} alt="icon" height={63} width={59} className="absolute bottom-[150px] right-[326px]" />
     </div>
+    <div className="bpc relative bg-[url('../../public/images/hero-sec-2.svg')]   flex flex-col items-center justify-center">
+    </div>
+    <div className="text-center mt-[-300px] mb-[100px] relative">
+      <h2 className=" text-[50px]  font-rowdies">Scooping Happiness into Every Cone</h2>
+      <p className="text-center bpcp font-rowdies mt-[70px] capitalize px-[7%]">
+        Ice cream is a yummy treat &nbsp;
+        <Image src={icicon1} alt="icon" height={50} width={50} className="inline relative top-[-10px]" />
+        &nbsp; at that we all love. It comes in many flavors like chocolate, vanilla, strawberry &nbsp;
+        <Image src={icicon2} alt="icon" height={50} width={50} className="inline relative top-[-5px]" />
+        &nbsp; and more. Some people like it in a &nbsp;
+        <Image src={icicon3} alt="icon" height={40} width={40} className="inline relative top-[-10px]" />
+        &nbsp; bowl, and some like it in a cone. 
+        </p>
+        <Image src={icicon4} alt="icon" height={60} width={60} className="inline absolute top-[240px] left-[5%]" />
+    </div>
+    </>
   );
 };
 
