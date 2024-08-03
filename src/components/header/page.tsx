@@ -62,7 +62,7 @@ const Header = () => {
 
 
     return (
-        <header id="navbar" className={`flex justify-between items-center fixed w-full z-[20] h-[120px] px-[40px] md:px-[80px] xl:px-[120px] bg-pink-base`}>
+        <header id="navbar" className={`flex justify-between items-center fixed w-full z-[150] h-[120px] px-[40px] md:px-[80px] xl:px-[120px] bg-pink-base`}>
             <div className="flex justify-between items-center w-full border-b-2 border-dashed border-white h-full">
                 <div className="flex items-center">
                     <Link href="/">

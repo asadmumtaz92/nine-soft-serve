@@ -73,7 +73,7 @@ const IceCreams = () => {
                 {flavours?.map((item: any) => {
                     return (
                         <div
-                            onClick={() => { setActiveTab(item?.id) }}
+                            onClick={() => { setActiveTab(item?.id) }} key={item?.id}
                             className={`${item?.id == activeTab ? 'bg-pink-base text-white' : 'text-pink-base bg-white'} shadow-sm cursor-pointer flex items-center justify-center h-[50px] px-[40px] rounded-[30px] !font-outfit !font-[600] text-[1.25rem] text-nowrap`}
                         >
                             {item?.name}

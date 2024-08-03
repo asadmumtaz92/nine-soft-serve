@@ -14,8 +14,8 @@ const LandingPage = () => {
     return (
         <>
             <HeroSection />
-            <SecretRecipe/>
             <IceCreams />
+            <SecretRecipe/>
             <DeliciousFlavours />
             <Catering/>
             <Instagram/>
