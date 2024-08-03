@@ -93,7 +93,7 @@ const WhatsAppChat = () => {
                     <div onClick={chatModalHandler} className="text-white flex h-[115px] items-center px-[20px] py-[10px]">
                         <Image onClick={chatModalHandler} src={'/icons/icon-back.svg'} alt="icon" height={16} width={8} className=" mr-6 cursor-pointer" />
 
-                        <div className="w-[60px] h-[60px] rounded-[30px] bg-[#BFBFBF]"></div>
+                        <div className="w-[60px] h-[60px] rounded-[30px] bg-[#BFBFBFCC]"></div>
                         <div className="flex flex-col ml-4">
                             <h1 className="text-[0.9rem] leding-[1rem] !font-[700] !font-[]">Jennie</h1>
                             <p className="text-[0.8rem] leading-[0.9rem] mt-2">Customer Care</p>
@@ -104,12 +104,13 @@ const WhatsAppChat = () => {
                 {/* BODY */}
                 <div className="flex flex-1 flex-col bg-white absolute top-[115px] w-full h-[325px] overflow-hidden overflow-scroll btr pt-3">
                     <div className="flex flex-col gap-y-[20px] rounded-2xl mx-6 flex-1">
-                        <p className='pl-4 flex items-center bg-[#F3FBF2] w-full h-[40px] rounded-2xl'>Hello how can i help you?</p>
-                        <p className='pl-4 flex items-center bg-[#F3FBF2] w-full h-[40px] rounded-2xl'>Hello how can i help you?</p>
-                        <p className='pl-4 flex items-center bg-[#F3FBF2] w-full h-[40px] rounded-2xl'>Hello how can i help you?</p>
+                        <p className='px-4 flex items-center bg-[#F3FBF2] w-full h-[40px] rounded-2xl'>Hello how can i help you?</p>
+                        <p className='px-4 py-2 flex items-center bg-[#F3FBF2] w-full h-[40px] rounded-2xl justify-end'>Hello! I'm looking on specific flavour</p>
+                        <p className='px-4 flex items-center bg-[#F3FBF2] w-full h-[40px] rounded-2xl'>Which flavour you want?</p>
                     </div>
                     <div className="flex items- bg-[#F3FBF2] w-full h-[50px]">
-                        <input placeholder='Write text here...' className='pl-5 bg-[#F3FBF2] w-full h-[48px] !outline-0 !ring-0' />
+                        <input placeholder='Write text here...' className='pl-5 bg-[#F3FBF2] w-full h-[48px] !outline-0 !ring-0 pr-2' />
+                        <Image src={'/icons/btn-send.svg'} alt="icon" height={30} width={30} className=" mr-6 cursor-pointer" />
                     </div>
                 </div>
             </div>
