@@ -28,9 +28,14 @@ const config: Config = {
                     "0%": { transform: "translateX(0)" },
                     "100%": { transform: "translateX(-100%)" },
                 },
+                rotate: {
+                    '0%, 10%': { transform: 'rotate(0deg)' },
+                    '50%': { transform: 'rotate(30deg)' },
+                  },
             },
             animation: {
                 scrollingLogo: "scroll 500s linear infinite",
+                rotate: 'rotate 1s linear infinite',
             },
         },
     },

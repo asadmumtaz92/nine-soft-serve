@@ -30,9 +30,9 @@ const HeroSection: React.FC = () => {
                 </Link>
             </div>
             <Image src={Heroicon1} alt="icon" height={92} width={91} className="absolute top-[205px] left-[8%]" />
-            <Image src={Heroicon2} alt="icon" height={129} width={116} className="absolute top-[178px] right-[10%] hover:rotate-[45deg] transation trnsform duration-500" />
+            <Image src={Heroicon2} alt="icon" height={129} width={116} className="absolute top-[178px] right-[10%] animate-rotate" />
             <Image src={Heroicon3} alt="icon" height={63} width={62} className="absolute bottom-[133px] left-[15%]" />
-            <Image src={Heroicon4} alt="icon" height={63} width={59} className="absolute bottom-[150px] right-[20%] hover:rotate-[90deg] transation trnsform duration-500" />
+            <Image src={Heroicon4} alt="icon" height={63} width={59} className="absolute bottom-[150px] right-[20%] animate-rotate" />
         </div>
     )
 }
