@@ -91,3 +91,7 @@
     border-top-right-radius: 30px;
     border-top-right-radius: 30px;
 }
+
+.product:hover .hover-image {
+    transform: scale(1.1);
+}

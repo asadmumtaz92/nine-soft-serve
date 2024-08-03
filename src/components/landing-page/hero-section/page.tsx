@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
 
 
     return (
-        <div className="relative z-[3] bg-[url('/images/hero-sec.svg')] bg-cover bg-bottom bg-no-repeat pt-[250px] pb-[130px] lg:px-[120px] px-[100px] flex flex-col items-center justify-center min-h-[100vh] gap-[17px]">
+        <div className="relative z-[3] bg-[url('/images/hero-sec.svg')] bg-cover bg-bottom bg-no-repeat pt-[250px] pb-[130px] lg:px-[120px] px-[100px] flex flex-col items-center justify-center min-h-[80vh] gap-[17px]">
             <div className="flex relative">
                 <h1 className="lg:text-[75px] text-[50px] lg:leading-[95px] leading-[80px] text-center text-white font-bold md:max-w-[734px] !font-rowdies">
                     <Image src={HeroHeadingIcon} alt="icon" height={115} width={97} className="absolute lg:top-[-40px] top-[-34px] lg:left-[115px] left-[26px] lg:h-[115] lg:w-[97px] h-[95px] w-[80px]" />

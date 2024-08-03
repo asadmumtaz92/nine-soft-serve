@@ -78,11 +78,11 @@ const IceCreams = () => {
     const ProductItem = (data: any) => {
         const { id, image, type } = data?.data
         return (
-            <div className="flex flex-col items-center relative w-[280px] h-[420px] cursor-pointer mb-[50px] mx-auto">
+            <div className="flex flex-col items-center relative w-[280px] h-[420px] cursor-pointer mb-[50px] mx-auto product">
                 <Image
                     src={image}
                     alt="Image2Work logo"
-                    className="w-[220px] h-[200px]"
+                    className="w-[220px] h-[200px] hover-image transform transition-transform duration-300"
                     width={220}
                     height={200}
                 />
