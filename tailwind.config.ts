@@ -14,10 +14,23 @@ const config: Config = {
                     "400": "#FF5394",
                     "600": "#E34F4D",
                 },
+                brown: {
+                    "base": "#5A3956"
+                }
             },
             fontFamily: {
                 outfit: ['var(--font-outfit)'],
                 rowdies: ['var(--font-rowdies)'],
+            },
+
+            keyframes: {
+                scroll: {
+                    "0%": { transform: "translateX(0)" },
+                    "100%": { transform: "translateX(-100%)" },
+                },
+            },
+            animation: {
+                scrollingLogo: "scroll 500s linear infinite",
             },
         },
     },
