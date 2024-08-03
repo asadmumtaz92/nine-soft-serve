@@ -133,7 +133,7 @@ const DeliciousFlavours = () => {
 
     return (
         <>
-            <div className="flex flex-col justify-center w-full min-h-[100vh] pt-[160px] bg-[url('/bg/delic_flav.svg')] bg-top bg-cover self-stretch bg-no-repeat">
+            <div className="flex flex-col justify-center w-full min-h-[100vh] pt-[160px] z-[4] bg-[url('/bg/delic_flav.svg')] bg-top bg-cover self-stretch bg-no-repeat">
                 <div className="flex justify-center !font-rowdies !font-[400] text-[50px] leading-[60px] text-center text-pink-600 mb-[80px]">
                     Delicious Flavours
                 </div>
@@ -151,7 +151,7 @@ const DeliciousFlavours = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex w-full h-[130px] bg-[url('/bg/delic_flav_footer.svg')] bg-cover bg-bottom self-stretch bg-no-repeat"></div>
+            <div className="flex w-full h-[130px] z-[3] bg-[url('/bg/delic_flav_footer.svg')] bg-cover bg-bottom self-stretch bg-no-repeat"></div>
         </>
     )
 }
