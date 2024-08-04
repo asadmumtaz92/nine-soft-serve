@@ -14,7 +14,7 @@
     height: 500px;
     background-repeat: no-repeat;
     position: relative;
-    top: -300px;
+    top: -250px;
 }
 
 .bpc2 {
@@ -24,7 +24,6 @@
     background-repeat: no-repeat;
     position: relative;
     top: -40px;
-    z-index: 2 !important;
     width: 100%;
 }
 
@@ -33,54 +32,6 @@
     font-weight: 300;
     line-height: 70px;
     text-align: center;
-}
-
-.shop-btn {
-    width: 205px;
-    height: 52px;
-    top: 296px;
-    gap: 0px;
-    border-radius: 25px;
-    color: white;
-    font-size: 20px;
-    margin-top: 35px;
-    background-color: #FD85B2;
-}
-
-.shop-btn-2 {
-    width: 314.95px;
-    height: 52px;
-    top: 296px;
-    gap: 0px;
-    border-radius: 25px;
-    color: white;
-    font-size: 20px;
-    margin-top: 35px;
-    background-color: #FD85B2;
-}
-
-.shop-btn-3 {
-    width: 198.29px;
-    height: 52px;
-    top: 296px;
-    gap: 0px;
-    border-radius: 25px;
-    color: white;
-    font-size: 20px;
-    margin-top: 35px;
-    background-color: #FD85B2;
-}
-
-.insta-btn {
-    width: 298.29px;
-    height: 52px;
-    top: 296px;
-    gap: 0px;
-    border-radius: 25px;
-    color: white;
-    font-size: 20px;
-    margin-top: 35px;
-    background-color: #2D6AC6;
 }
 
 .btr {
